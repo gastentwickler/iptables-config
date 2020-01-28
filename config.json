@@ -1,0 +1,10 @@
+{
+  "ipaddress_role_bs_lng": "10.20.30.40/24",
+  "ipaddress_role_bs_muc": "11.11.2.0/24",
+  "ipaddress_role_bs_bre": "11.11.3.0/24",
+  "ipaddress_role_bs_kar": "11.11.4.0/24",
+  "ipaddress_role_bu_lng": "11.22.1.0/24",
+  "ipaddress_role_bu_muc": "11.22.2.0/24",
+  "ipaddress_role_bu_bre": "11.22.3.0/24",
+  "ipaddress_role_bu_kar": "11.22.4.0/25"
+}

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   
+
+    <!-- Own CSS -->
+    <link rel="stylesheet" href="rules.css">
+
+
+    <title>IP Tables Config</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+
+
+
+
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" id="role-home-tab" data-toggle="tab" href="#role-home" role="tab" aria-controls="role-home" aria-selected="true">Role Server</a>
+        <a class="nav-item nav-link" id="nav-roleconfig-tab" data-toggle="tab" href="#nav-roleconfig" role="tab" aria-controls="nav-roleconfig" aria-selected="false">Role Server Config</a>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="role-home" role="tabpanel" aria-labelledby="role-home-tab">
+
+        <h3>IP Tables Konfiguration Role Server Betriebssystem</h3>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Langen</th>
+              <th scope="col">München</th>
+              <th scope="col">Bremen</th>
+              <th scope="col">Karlsruhe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Langen</th>
+              <td> <button                                              type="button" class="btn btn-primary active" disabled data-toggle="button" aria-pressed="false" autocomplete="off"></button>	</td>
+              <td> <button id = "rolebslngmuc"   onclick="ipt('role', 'bs', 'lng', 'muc')"  type="button" class="btn btn-primary active"          data-toggle="button" aria-pressed="true" autocomplete="off"></button> 	</td>
+              <td> <button id = "rolebslngbre"   onclick="ipt('role', 'bs', 'lng', 'bre')"  type="button" class="btn btn-primary active"          data-toggle="button" aria-pressed="false" autocomplete="off"></button>	</td>
+              <td> <button id = "rolebslngkar"   onclick="ipt('role', 'bs', 'lng', 'kar')"  type="button" class="btn btn-primary active"          data-toggle="button" aria-pressed="true" autocomplete="off"></button>	</td>
+        
+            </tr>
+            <tr>
+              <th scope="row">München</th>
+              <td> 	</td>
+              <td> <button                                              type="button" class="btn btn-secondary active" disabled data-toggle="button" aria-pressed="false" autocomplete="off"></button>	</td>
+              <td> <button id = "rolebsmucbre"   onclick="ipt('role', 'bs', 'muc', 'bre')"  type="button" class="btn btn-primary active"            data-toggle="button" aria-pressed="false" autocomplete="off"></button>	</td>
+              <td> <button id = "rolebsmuckar"   onclick="ipt('role', 'bs', 'muc', 'kar')"  type="button" class="btn btn-primary active"            data-toggle="button" aria-pressed="true" autocomplete="off"></button>	</td>
+            </tr>
+            <tr>
+              <th scope="row">Bremen</th>
+              <td> 	</td>
+              <td> 	</td>
+              <td> <button                                              type="button" class="btn btn-secondary active" disabled data-toggle="button" aria-pressed="false" autocomplete="off"></button>	</td>
+              <td> <button id = "rolebsbrekar"   onclick="ipt('role', 'bs', 'bre', 'kar')"  type="button" class="btn btn-primary active"            data-toggle="button" aria-pressed="true" autocomplete="off"></button>	</td>
+            </tr>
+            <tr>
+              <th scope="row">Karlsruhe</th>
+              <td> 	</td>
+              <td> 	</td>
+              <td> 	</td>
+              <td> <button                                              type="button" class="btn btn-secondary active" disabled data-toggle="button" aria-pressed="false" autocomplete="off"></button>	</td>
+            </tr>
+          </tbody>
+        
+        </table>
+
+
+
+        <h3>IP Tables Konfiguration Role Server Backupsystem</h3>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Langen</th>
+              <th scope="col">München</th>
+              <th scope="col">Bremen</th>
+              <th scope="col">Karlsruhe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Langen</th>
+              <td> <button                                              type="button" class="btn btn-primary active" disabled data-toggle="button" aria-pressed="false" autocomplete="off"></button>	</td>
+              <td> <button id = "rolebulngmuc"   onclick="ipt('role', 'bu', 'lng', 'muc')"  type="button" class="btn btn-primary active"          data-toggle="button" aria-pressed="true" autocomplete="off"></button> 	</td>
+              <td> <button id = "rolebulngbre"   onclick="ipt('role', 'bu', 'lng', 'bre')"  type="button" class="btn btn-primary active"          data-toggle="button" aria-pressed="false" autocomplete="off"></button>	</td>
+              <td> <button id = "rolebulngkar"   onclick="ipt('role', 'bu', 'lng', 'kar')"  type="button" class="btn btn-primary active"          data-toggle="button" aria-pressed="true" autocomplete="off"></button>	</td>
+        
+            </tr>
+            <tr>
+              <th scope="row">München</th>
+              <td> 	</td>
+              <td> <button                                              type="button" class="btn btn-secondary active" disabled data-toggle="button" aria-pressed="false" autocomplete="off"></button>	</td>
+              <td> <button id = "rolebumucbre"   onclick="ipt('role', 'bu', 'muc', 'bre')"  type="button" class="btn btn-primary active"            data-toggle="button" aria-pressed="false" autocomplete="off"></button>	</td>
+              <td> <button id = "rolebumuckar"   onclick="ipt('role', 'bu', 'muc', 'kar')"  type="button" class="btn btn-primary active"            data-toggle="button" aria-pressed="true" autocomplete="off"></button>	</td>
+            </tr>
+            <tr>
+              <th scope="row">Bremen</th>
+              <td> 	</td>
+              <td> 	</td>
+              <td> <button                                              type="button" class="btn btn-secondary active" disabled data-toggle="button" aria-pressed="false" autocomplete="off"></button>	</td>
+              <td> <button id = "rolebubrekar"   onclick="ipt('role', 'bu', 'bre', 'kar')"  type="button" class="btn btn-primary active"            data-toggle="button" aria-pressed="true" autocomplete="off"></button>	</td>
+            </tr>
+            <tr>
+              <th scope="row">Karlsruhe</th>
+              <td> 	</td>
+              <td> 	</td>
+              <td> 	</td>
+              <td> <button                                              type="button" class="btn btn-secondary active" disabled data-toggle="button" aria-pressed="false" autocomplete="off"></button>	</td>
+            </tr>
+          </tbody>
+        
+        </table>
+
+      </div>
+      <div class="tab-pane fade" id="nav-roleconfig" role="tabpanel" aria-labelledby="nav-roleconfig-tab">
+
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Role BS Router IP</th>
+              <th scope="col">Role BS Router IP</th>
+              <!-- <th scope="col">undefined</th>
+              <th scope="col">undefined</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Langen</th>
+              <td> <input type="text" class="form-control" id="rolebslngip" placeholder="IP/Netmask">	</td>
+              <td> <input type="text" class="form-control" id="rolebulngip" placeholder="IP/Netmask">	</td>
+              <!-- <td> <input type="text" class="form-control" id="undefined" placeholder="IP/Netmask">	</td>
+              <td> <input type="text" class="form-control" id="undefined" placeholder="IP/Netmask">	</td>            -->
+            </tr>
+            <tr>
+              <th scope="row">München</th>
+              <td> <input type="text" class="form-control" id="rolebsmucip" placeholder="IP/Netmask">	</td>
+              <td> <input type="text" class="form-control" id="rolebumucip" placeholder="IP/Netmask">	</td>
+              <!-- <td> <input type="text" class="form-control" id="undefined" placeholder="IP/Netmask">	</td>
+              <td> <input type="text" class="form-control" id="undefined" placeholder="IP/Netmask">	</td>        -->
+            </tr>
+            <tr>
+              <th scope="row">Bremen</th>
+              <td> <input type="text" class="form-control" id="rolebsbreip" placeholder="IP/Netmask">	</td>
+              <td> <input type="text" class="form-control" id="rolebubreip" placeholder="IP/Netmask">	</td>
+              <!-- <td> <input type="text" class="form-control" id="undefined" placeholder="IP/Netmask">	</td>
+              <td> <input type="text" class="form-control" id="undefined" placeholder="IP/Netmask">	</td>         -->
+            </tr>
+            <tr>
+              <th scope="row">Karlsruhe</th>
+              <td> <input type="text" class="form-control" id="rolebskarip" placeholder="IP/Netmask">	</td>
+              <td> <input type="text" class="form-control" id="rolebukarip" placeholder="IP/Netmask">	</td>
+              <!-- <td> <input type="text" class="form-control" id="undefined" placeholder="IP/Netmask">	</td>
+              <td> <input type="text" class="form-control" id="undefined" placeholder="IP/Netmask">	</td>         -->
+            </tr>
+          </tbody>
+        
+        </table>
+
+
+        <button onclick="save()" type="submit" class="btn btn-primary mb-2">Speichern</button>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+    
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  -->
+
+    
+    <script>let $ = require('jquery');</script>
+    <script>require('popper.js');</script>
+    <script>require('bootstrap');</script>
+
+    <script src="myscripts.js"></script>
+
+
+
+  </body>
+</html>
